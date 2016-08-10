@@ -6,7 +6,7 @@ arr = list()
 with open(datfilename) as file:
     content = file.readlines()
     for line in content:
-        arr.append(line[:-1].split('	'))
+        arr.append(line[:-1].split('\t'))
 
 plt.plot(arr)
 plt.ylabel('Coordinate Y')

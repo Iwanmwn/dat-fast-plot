@@ -5,7 +5,6 @@ datfilename = "f1.dat"
 arr = list()
 with open(datfilename) as file:
     content = file.readlines()
-    num = 0
     for line in content:
         arr.append(line[:-1].split('	'))
 

@@ -2,13 +2,7 @@ import matplotlib.pyplot as plt
 
 datfilename = "f1.dat"
 
-arr = list()
-with open(datfilename) as file:
-    content = file.readlines()
-    for line in content:
-        arr.append(line[:-1].split('\t'))
-
-plt.plot(arr)
+plt.plot([line.split() for line in open(datfilename)])
 plt.ylabel('Coordinate Y')
 plt.xlabel('Coordinate X')
 
